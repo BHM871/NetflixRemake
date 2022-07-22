@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/image_shadow"
+        android:drawable="@drawable/movie_4" />
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:centerColor="@android:color/transparent"
+                android:endColor="#EF000000"
+                android:startColor="#CC000000" />
+        </shape>
+    </item>
+
+</layer-list>

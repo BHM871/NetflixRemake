@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MovieDetailActivity">
+
+        <ImageView
+            android:id="@+id/image_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shadows"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_movie_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/image_detail"
+            app:layout_constraintEnd_toEndOf="@+id/image_detail"
+            app:layout_constraintStart_toStartOf="@+id/image_detail"
+            app:layout_constraintTop_toTopOf="@+id/image_detail" />
+
+        <TextView
+            android:id="@+id/text_title_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:maxLines="1"
+            tools:text="Batman - O Brabo"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_detail"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            tools:text="Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!Hello Word!"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/image_detail" />
+
+        <TextView
+            android:id="@+id/text_cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            tools:text="Hello Word!Hello Word!Hello Word!Hello Word!HelloHello Word!Hello Word!Hello Word!Hello Word!HelloHello Word!Hello Word!Hello Word!Hello Word!HelloHello Word!Hello Word!Hello Word!Hello Word!HelloHello Word!Hello Word!Hello Word!Hello Word!Hello"
+            android:textColor="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/text_desc" />
+
+        <TextView
+            android:id="@+id/text_similar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/similar"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/text_cast" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_similar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_similar"
+            tools:listitem="@layout/movie_item_similar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
