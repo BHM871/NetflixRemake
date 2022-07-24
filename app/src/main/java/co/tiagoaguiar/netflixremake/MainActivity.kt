@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity(), CategoryTask.Callback {
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onResult(categories: List<Category>) {
-        val a = categories
         this.list.clear()
         this.list.addAll(categories)
         adapterMain.notifyDataSetChanged()
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity(), CategoryTask.Callback {
     }
 
     override fun onFailure(message: String) {
-        val a = message
         progress.visibility = View.GONE
     }
 

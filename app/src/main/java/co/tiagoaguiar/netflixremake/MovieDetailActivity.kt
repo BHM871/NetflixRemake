@@ -47,6 +47,5 @@ class MovieDetailActivity : AppCompatActivity() {
         val shadowImageView = ContextCompat.getDrawable(this, R.drawable.movie_4)
         layerDrawable.setDrawableByLayerId(R.id.image_shadow, shadowImageView)
         img.setImageDrawable(layerDrawable)
-
     }
 }
